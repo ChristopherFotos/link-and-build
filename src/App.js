@@ -1,25 +1,58 @@
 import logo from './logo.svg';
+import {Route, Switch, Link} from 'react-router-dom'
+import CategorySelect from './components/CategorySelect/CategorySelect'
+import React, { Component } from 'react'
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+export default class App extends Component {
+
+  state = {
+    // category
+    // subcategory
+    // difficulty
+    // quiz
+  }
+
+  handleCategoryChange = (e)=> {
+    this.setState(
+      {
+        ...this.state,
+        category: e.target.dataset.category
+      }
+    )
+  }
+
+  changeSubcategory = (c)=>{
+    this.setState(
+      {
+        ...this.state,
+        category: c
+      }
+    )
+  }
+
+  handleDifficultyChange = (e)=> {
+    this.setState(
+      {
+        ...this.state,
+        category: e.target.dataset.difficulty
+      }
+    )
+  }
+
+
+  render() {
+    return (
+      <div>
+        <Switch>
+          <Route path = '/' exact component      = {HomePage}/>
+          <Route path = '/category' component    = {CategorySelect}/>
+          <Route path = '/:category' component   = {DifficultySelect}/>
+          <Route path = '/:difficulty' component = {QuizSelect}/>
+        </Switch>
+      </div>
+    )
+  }
 }
 
-export default App;

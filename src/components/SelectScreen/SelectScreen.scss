@@ -12,7 +12,7 @@
      }
 }
 
-.categories {
+.options {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -28,6 +28,6 @@
        &:hover {
            cursor: pointer;
        }
-    }
+    } 
 }
 

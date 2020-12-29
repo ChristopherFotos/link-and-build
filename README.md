@@ -3,6 +3,7 @@
 
 2. In your terminal, type `git remote add origin https://github.com/ChristopherFotos/link-and-build.git` and hit enter. This will ensure that your local repository is linked to this repository, i.e., that your changes will show up here when you use git push. 
 
+(You don't need to do the first to steps every time, only when you're first getting set up.)
 
 3. Now it's time to figure out what you want to work on. Check the issues tab on this repo and pick one that no one is working on yet, and then let everyone else know that you've claimed it by assigning yourself to it (should be on the right hand side of the screen). If there are no issues available, find something that needs to be done and open an issue for it. 
 

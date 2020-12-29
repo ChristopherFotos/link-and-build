@@ -1,8 +1,11 @@
 export const subcategories = {
     science: [
-        'chemistry',
-        'biology'
-    ]
+        'nature',
+        'computer', 
+        'mathematics', 
+        'gadgets'
+    ],
+    entertainment: []
 }
 
 

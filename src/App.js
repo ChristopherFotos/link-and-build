@@ -4,6 +4,8 @@ import React, { Component } from 'react'
 import './App.css';
 import StartScreen from './components/StartScreen/StartScreen';
 import SelectScreen from './components/SelectScreen/SelectScreen';
+import categories from './data/category-select'
+import difficulties from './data/difficulty-select'
 
 
 export default class App extends Component {
@@ -35,14 +37,14 @@ export default class App extends Component {
   //   )
   // }
 
-  // handleDifficultyChange = (e)=> {
-  //   this.setState(
-  //     {
-  //       ...this.state,
-  //       category: e.target.dataset.difficulty
-  //     }
-  //   )
-  // }
+  handleDifficultyChange = (e)=> {
+    this.setState(
+      {
+        ...this.state,
+        category: e.target.dataset.difficulty
+      }
+    )
+  }
 
 
   render() {
@@ -52,8 +54,8 @@ export default class App extends Component {
 
         <Switch>
           <Route path = '/' exact component={StartScreen}/>
-          <Route path = '/category' component= {()=><SelectScreen clickHandler={this. handleCategoryChange}/>} />
-          {/* <Route path = '/:category' component   = {DifficultySelect}/> */}
+          <Route path = '/category'   component = {()=><SelectScreen type='category'   options = {categories} clickHandler = {this.handleCategoryChange} /> }/>
+          <Route path = '/difficulty' component = {()=><SelectScreen type='difficulty' options = {difficulties} clickHandler = {this.handleDifficultyChange}/>}/>
           {/* <Route path = '/:difficulty' component = {QuizSelect}/> */}
         </Switch>
       </div>

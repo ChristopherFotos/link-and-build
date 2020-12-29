@@ -9,11 +9,15 @@
     flex-direction: column;
     align-items: center;
     &__logo {
-        font-size: 5rem;
-        font-weight: bold;
-        text-align: center;
-        color: $oxford-blue;
-        padding-bottom: 5rem;
+        // font-size: 5rem;
+        // font-weight: bold;
+        // text-align: center;
+        // color: $oxford-blue;
+        // padding-bottom: 5rem;
+        background-image: url('../../assets/logo.jpg');
+        background-size: contain;
+        width: 90%;
+        height: 200px;
 
     }
     &__hero {

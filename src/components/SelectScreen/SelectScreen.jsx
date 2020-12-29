@@ -13,9 +13,10 @@ import {Link} from 'react-router-dom'
 // get a list of options to render. 
 
 class SelectScreen extends Component {
-
+    
 
     render() {
+
 
         return (
             <div className="body">
@@ -25,7 +26,8 @@ class SelectScreen extends Component {
                     <Link to={option.to}>
                         <button onClick={this.props.clickHandler} 
                             className="options__button" 
-                            data-category={option.data}>
+                            data-option = {option.data}
+                        >
                             {option.text}
                         </button>
                     </Link>)}

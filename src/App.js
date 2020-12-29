@@ -23,7 +23,7 @@ export default class App extends Component {
     this.setState(
       {
         ...this.state,
-        category: e.target.dataset.category
+        category: e.target.dataset.option
       }
     )
   }
@@ -41,7 +41,7 @@ export default class App extends Component {
     this.setState(
       {
         ...this.state,
-        category: e.target.dataset.difficulty
+        difficulty: e.target.dataset.option
       }
     )
   }
@@ -51,7 +51,6 @@ export default class App extends Component {
     return (
       <div>
         {/* <StartScreen /> */}
-
         <Switch>
           <Route path = '/' exact component={StartScreen}/>
           <Route path = '/category'   component = {()=><SelectScreen type='category'   options = {categories} clickHandler = {this.handleCategoryChange} /> }/>

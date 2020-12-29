@@ -11,8 +11,7 @@ function StartScreen () {
                 <div className="start__hero"></div>
                 <Link to="/category" className="link-to-category">
                     <button className="start__button">Get Started</button> 
-                </Link>
-                
+                </Link>                
             </body>
     ) 
 }

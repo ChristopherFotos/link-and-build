@@ -5,7 +5,7 @@
 
 (You don't need to do the first to steps every time, only when you're first getting set up.)
 
-3. Now it's time to figure out what you want to work on. Check the issues tab on this repo and pick one that no one is working on yet, and then let everyone else know that you've claimed it by assigning yourself to it (should be on the right hand side of the screen). If there are no issues available, find something that needs to be done and open an issue for it. 
+3. Now it's time to figure out what you want to work on. Check the issues tab on this repo and pick one that no one is working on yet, and then let everyone else know that you've claimed it by assigning yourself to it (should be on the right hand side of the screen). If there are no issues available, or if you want to work on something that isn't currently listed, then find something that needs to be done and open an issue for it. 
 
 4. Open the project on your local machine and run `git pull` to get the latest updates. **this is an important step**. 
 

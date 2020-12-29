@@ -14,27 +14,22 @@ import {Link} from 'react-router-dom'
 
 class SelectScreen extends Component {
 
-    // ADDING A TEST
 
     render() {
 
         return (
             <div className="body">
-                <h1 className="body__title">Choose a {this.props.cardType}</h1>
+                <h1 className="body__title">Choose a {this.props.type}</h1>
                 <div className="options">
-                    {/* {this.props.options.map(option => )} */}
-
-
-                    <Link to="/difficulty">
-                        <button onClick={this.props.clickHandler} className="options__button" data-category='science'>Science</button>
-                    </Link>
-                    <Link to="/difficulty">
-                        <button className="options__button" data-category='entertainment'>Entertainment</button>
-                    </Link>
-                    <Link to="/difficulty">
-                        <button className="options__button" data-category='history'>History</button>      
-                    </Link>
-                </div>
+                    {this.props.options.map(option => 
+                    <Link to={option.to}>
+                        <button onClick={this.props.clickHandler} 
+                            className="options__button" 
+                            data-category={option.data}>
+                            {option.text}
+                        </button>
+                    </Link>)}
+                </div> 
             </div>
         )
     }

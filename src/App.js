@@ -11,15 +11,13 @@ import difficulties from './data/difficulty-select'
 export default class App extends Component {
 
   state = {
-    category: ''
+    category: '',
     // subcategory
-    // difficulty
+    difficulty: ''
     // quiz
   }
 
   handleCategoryChange = (e)=> {
-    // e.preventDefault();
-    console.log(e.target.dataset.category)
     this.setState(
       {
         ...this.state,
@@ -48,6 +46,8 @@ export default class App extends Component {
 
 
   render() {
+    console.log(this.state.category)
+    console.log(this.state.difficulty)
     return (
       <div>
         {/* <StartScreen /> */}
